@@ -53,33 +53,33 @@ public class TestActivity extends AppCompatActivity {
 
         });
     }
-    protected void setNextMonth() {
-        if (cal_month.get(GregorianCalendar.MONTH) == cal_month
-                .getActualMaximum(GregorianCalendar.MONTH)) {
-            cal_month.set((cal_month.get(GregorianCalendar.YEAR) + 1),
-                    cal_month.getActualMinimum(GregorianCalendar.MONTH), 1);
-        } else {
-            cal_month.set(GregorianCalendar.MONTH,
-                    cal_month.get(GregorianCalendar.MONTH) + 1);
-        }
-
-    }
-
-    protected void setPreviousMonth() {
-        if (cal_month.get(GregorianCalendar.MONTH) == cal_month
-                .getActualMinimum(GregorianCalendar.MONTH)) {
-            cal_month.set((cal_month.get(GregorianCalendar.YEAR) - 1),
-                    cal_month.getActualMaximum(GregorianCalendar.MONTH), 1);
-        } else {
-            cal_month.set(GregorianCalendar.MONTH,
-                    cal_month.get(GregorianCalendar.MONTH) - 1);
-        }
-
-    }
-
-    public void refreshCalendar() {
-        cal_adapter.refreshDays();
-        cal_adapter.notifyDataSetChanged();
-        tv_month.setText(android.text.format.DateFormat.format("MMMM yyyy", cal_month));
-    }
+//    protected void setNextMonth() {
+//        if (cal_month.get(GregorianCalendar.MONTH) == cal_month
+//                .getActualMaximum(GregorianCalendar.MONTH)) {
+//            cal_month.set((cal_month.get(GregorianCalendar.YEAR) + 1),
+//                    cal_month.getActualMinimum(GregorianCalendar.MONTH), 1);
+//        } else {
+//            cal_month.set(GregorianCalendar.MONTH,
+//                    cal_month.get(GregorianCalendar.MONTH) + 1);
+//        }
+//
+//    }
+//
+//    protected void setPreviousMonth() {
+//        if (cal_month.get(GregorianCalendar.MONTH) == cal_month
+//                .getActualMinimum(GregorianCalendar.MONTH)) {
+//            cal_month.set((cal_month.get(GregorianCalendar.YEAR) - 1),
+//                    cal_month.getActualMaximum(GregorianCalendar.MONTH), 1);
+//        } else {
+//            cal_month.set(GregorianCalendar.MONTH,
+//                    cal_month.get(GregorianCalendar.MONTH) - 1);
+//        }
+//
+//    }
+//
+//    public void refreshCalendar() {
+//        cal_adapter.refreshDays();
+//        cal_adapter.notifyDataSetChanged();
+//        tv_month.setText(android.text.format.DateFormat.format("MMMM yyyy", cal_month));
+//    }
 }

@@ -97,13 +97,13 @@ public class CalendarAdapter extends BaseAdapter {
 		
 		String gridvalue = separatedTime[2].replaceFirst("^0*", "");
 		if ((Integer.parseInt(gridvalue) > 1) && (position < firstDay)) {
-//			dayView.setTextColor(Color.GRAY);
-			dayView.setTextColor(Color.TRANSPARENT);
+			dayView.setTextColor(Color.GRAY);
+//			dayView.setTextColor(Color.TRANSPARENT);
 			dayView.setClickable(false);
 			dayView.setFocusable(false);
 		} else if ((Integer.parseInt(gridvalue) < 7) && (position > 28)) {
-//			dayView.setTextColor(Color.GRAY);
-			dayView.setTextColor(Color.TRANSPARENT);
+			dayView.setTextColor(Color.GRAY);
+//			dayView.setTextColor(Color.TRANSPARENT);
 			dayView.setClickable(false);
 			dayView.setFocusable(false);
 		} else {
@@ -116,9 +116,9 @@ public class CalendarAdapter extends BaseAdapter {
 			
 			v.setBackgroundColor(Color.CYAN);
 		} else {
-//			v.setBackgroundColor(Color.parseColor("#343434"));
+			v.setBackgroundColor(Color.parseColor("#343434"));
 //			v.setBackgroundColor(Color.RED);
-			v.setBackgroundColor(Color.WHITE);
+//			v.setBackgroundColor(Color.WHITE);
 		}
 		
 		
@@ -151,8 +151,8 @@ public class CalendarAdapter extends BaseAdapter {
 
 	public View setSelected(View view, int pos) {
 		if (previousView != null) {
-//		previousView.setBackgroundColor(Color.parseColor("#343434"));
-		previousView.setBackgroundColor(Color.WHITE);
+		previousView.setBackgroundColor(Color.parseColor("#343434"));
+//		previousView.setBackgroundColor(Color.WHITE);
 		}
 
 		view.setBackgroundColor(Color.CYAN);
@@ -166,7 +166,6 @@ public class CalendarAdapter extends BaseAdapter {
 				previousView = view;	
 					
 			}
-				
 		}
 		
 		
